@@ -1,23 +1,17 @@
 import React from "react"
 import { graphql } from "gatsby"
-import Img from "gatsby-image/withIEPolyfill"
-
-const Product = ({ data: { commerceProductDefault } }) => {
+import Product from "../components/product"
+const ProductTemplate = ({ data: { commerceProductDefault } }) => {
   const product = {
     title: commerceProductDefault.title,
     body: commerceProductDefault.body.value,
-    field_price: commerceProductDefault.field_price.formatted,
-    field_main_image_fluid:
+    price: commerceProductDefault.field_price.formatted,
+    imageProps:
       commerceProductDefault.relationships.field_main_image.localFile
         .childImageSharp.fluid,
   }
 
-  return (
-    <div>
-      <h1>{product.title}</h1>
-      <Img fluid={product.field_main_image_fluid} />
-    </div>
-  )
+  return <Product {...product} />
 }
 
 export const query = graphql`
@@ -47,4 +41,4 @@ export const query = graphql`
   }
 `
 
-export default Product
+export default ProductTemplate
