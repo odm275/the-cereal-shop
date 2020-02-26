@@ -11,12 +11,12 @@ module.exports = {
         postCssPlugins: [require("tailwindcss")],
       },
     },
-    // {
-    //   resolve: `gatsby-source-drupal`,
-    //   options: {
-    //     baseUrl: `http://drupal-gatsby-commerce.lndo.site/`,
-    //   },
-    // },
+    {
+      resolve: `gatsby-source-drupal`,
+      options: {
+        baseUrl: `http://drupal-gatsby-commerce.lndo.site/`,
+      },
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,

@@ -24,15 +24,9 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <div className="container mx-auto">
+    <div className="antialiased text-gray-900">
       <Header siteTitle={data.site.siteMetadata.title} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
+      <div className="container mx-auto">
         <main>{children}</main>
         <footer>
           © {new Date().getFullYear()}, Built with
