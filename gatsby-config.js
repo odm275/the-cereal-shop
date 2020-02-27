@@ -14,7 +14,8 @@ module.exports = {
     {
       resolve: `gatsby-source-drupal`,
       options: {
-        baseUrl: `http://drupal-gatsby-commerce.lndo.site/`,
+        baseUrl: `https://dev-the-cereal-shop-drupal.pantheonsite.io/`,
+        apiBase: `jsonapi`, // optional, defaults to `jsonapi`
       },
     },
     `gatsby-plugin-react-helmet`,
